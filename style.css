@@ -1,0 +1,104 @@
+/*ex-1*/
+li {
+	list-style: none;
+}
+.ex-1 li {
+	position: relative;
+	margin-top: 8px;
+	padding-left: 10px;
+}
+.ex-1 li::before {
+	content: "";
+	position: absolute;
+	left: -10px;
+	width: 18px;
+	height: 18px;
+	background: #FF0000;
+	border-radius: 50%;
+}
+.ex-1 li:nth-child(1)::before {
+	background: #FF0000;
+}
+.ex-1 li:nth-child(2)::before {
+	background: #FFB800;
+}
+.ex-1 li:nth-child(3)::before {
+	background: #FAFF00;
+}
+.ex-1 li:nth-child(4)::before {
+	background: #52FF00;
+}
+.ex-1 li:nth-child(5)::before {
+	background: #00FFF0;
+}
+.ex-1 li:nth-child(6)::before {
+	background: #0029FF;
+}
+.ex-1 li:nth-child(7)::before {
+	background: #7000FF;
+}
+
+/*ex-2*/
+.poetry {
+	counter-reset: number 0;
+}
+.poetry p {
+	position: relative;
+	counter-increment: number 1;
+	margin-left: 18px;
+}
+.poetry p::before {
+	content: counter(number) "-";
+	position: absolute;
+	left: -22px;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+/*ex-3*/
+
+.lighthouse {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.lighthouse div:nth-child(2n) {
+	border: 1px solid #000000;
+}
+.lighthouse div:nth-child(2n+1) {
+	background-color: red;
+}
+.lighthouse div:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 130px;
+	height: 60px;
+	background: black;
+}
+.lighthouse div:nth-child(1) div:first-child {
+	width: 32px;
+	height: 32px;
+	background-color: yellow;
+	border-radius: 50%;
+}
+.lighthouse div:nth-child(2) {
+	width: 150px;
+	height: 60px;
+}
+.lighthouse div:nth-child(3) {
+	width: 170px;
+	height: 60px;
+}
+.lighthouse div:nth-child(4) {
+	width: 190px;
+	height: 60px;
+}
+.lighthouse div:nth-child(5) {
+	width: 210px;
+	height: 60px;
+}
+.lighthouse div:nth-child(6) {
+	width: 250px;
+	height: 60px;
+}
